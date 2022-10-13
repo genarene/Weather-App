@@ -1,13 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
 import DarkBannerSection from '../DarkBannerSection'
+import DarkChartSection from '../DarkChartSection'
 import DarkNavbar from '../NavbarSection/DarkNavbar'
 
 const DarkSection = () => {
     return (
          <DarkContainer>
             <DarkNavbar />
-            <DarkBannerSection/>
+            <DarkBannerSection />
+            <DarkChartSection/>
             </DarkContainer>
     )
 }

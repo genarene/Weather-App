@@ -1,14 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
+import CountryCard from '../../components/cards/CountryCards'
+import LightChartSection from '../LightChartSection'
 import LightNavbar from '../NavbarSection/LightNavbar'
 const LightSection = () => {
     return (
          <LightContainer>
-                <LightNavbar/>
+        <LightNavbar />
  <BannerTitle>
                     <WeatherSpan>Weather</WeatherSpan>
                     <ForecastSpan>Forecast</ForecastSpan>
-              </BannerTitle>
+        </BannerTitle>
+            <CountryCard />
+            <LightChartSection/>
             </LightContainer>
        
     )
@@ -16,7 +20,7 @@ const LightSection = () => {
 
 const LightContainer = styled.div`
 background-color:#E3F6FE;
-width: 60%;
+width: 55%;
 border:1px solid #E3F6FE;
 border-top-left-radius:1.25rem;
 border-bottom-left-radius:1.25rem;

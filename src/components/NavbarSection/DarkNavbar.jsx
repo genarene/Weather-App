@@ -7,7 +7,10 @@ const DarkNavbar = () => {
         <Container>
             <Notifications> Notifications <DynamicSpan>4</DynamicSpan></Notifications>
             <PlacesSection>Places</PlacesSection> 
-                <ProfileImg src={ProfilePic} alt="moon" /> 
+            <ProfileDiv>
+                <ProfileImg src={ProfilePic} alt="moon" /> <RedDot/>
+        </ProfileDiv>
+                
         </Container>
     )
 }
@@ -20,7 +23,7 @@ const Container = styled.div`
 `
 const DynamicSpan= styled.span`
     background-color:#EB5464;
-    padding: 0.7rem 0.95rem;
+    padding: 0.3rem 0.6rem;
     border-radius:10px ;
     font-weight:bold;
     margin-left:0.6rem;
@@ -38,13 +41,25 @@ const PlacesSection =styled.div`
  font-family:Arial, Helvetica, sans-serif;
  font-size: 18px;
 `
-
+const ProfileDiv = styled.div`
+    position: relative;
+    padding:1rem 0;
+    cursor: pointer;
+`
 const ProfileImg =styled.img`
      margin-left: 9rem;
-   width: 100px;
-   height: 100px;
+   width: 70px;
+   height: 70px;
    border-radius: 10px;
   object-fit: cover;
 `
-
+const RedDot = styled.div`
+   background-color:#EB5464;
+   width:1rem;
+   height:1rem;
+   border-radius:50% ;
+   position: absolute;
+   top:0.8rem;
+   left:12.8rem ;
+`
 export default DarkNavbar

@@ -16,7 +16,7 @@ const LayoutGrid = styled.div`
 display: flex;
 margin:0;
 padding: 2rem 4rem;
-height: 100vh;
+height:100%;
 font-family: 'Montserrat', sans-serif;
 `
 

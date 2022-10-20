@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import CountryCard from '../../components/cards/CountryCards'
-import LightChartSection from '../LightChartSection'
+import VisualSection from '../VisualSection'
 import LightNavbar from '../NavbarSection/LightNavbar'
 const LightSection = () => {
     return (
@@ -12,7 +12,7 @@ const LightSection = () => {
                     <ForecastSpan>Forecast</ForecastSpan>
         </BannerTitle>
             <CountryCard />
-            <LightChartSection/>
+            <VisualSection/>
             </LightContainer>
        
     )

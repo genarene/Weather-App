@@ -22,7 +22,7 @@ const DarkSection = () => {
 
 const DarkContainer = styled.div`
 background-color:#110E3C;
-width: 35%;
+/* width: 40%; */
 border:1px solid #110E3C;
 border-top-right-radius:1.25rem;
 border-bottom-right-radius:1.25rem;

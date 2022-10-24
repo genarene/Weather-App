@@ -2,7 +2,8 @@
 import React from 'react'
 import styled from 'styled-components'
 import { useTable } from 'react-table'
-import {BsDropletFill} from "react-icons/bs"
+import { BsDropletFill,BsSunFill } from "react-icons/bs"
+
 
 
 
@@ -57,9 +58,18 @@ const LightTable=()=>{
         } ,
          
           },
-       {
+          {
         
-            accessor: 'icon',
+              accessor: "icon",
+              Cell: (props) => {
+                  return (
+                      <>
+                           <BsSunFill color='#F3C421' size="2rem" />
+                   
+                      </>
+                     
+                  )
+              }
           },
       {
        

@@ -1,15 +1,21 @@
 import React from 'react'
 import styled from 'styled-components'
 import DarkBannerSection from '../DarkBannerSection'
-import DarkChartSection from '../DarkChartSection'
 import DarkNavbar from '../NavbarSection/DarkNavbar'
+import {BsFillCloudFill} from "react-icons/bs"
+
 
 const DarkSection = () => {
     return (
-         <DarkContainer>
+        <DarkContainer>
+              <CloudTop>
+ <BsFillCloudFill size="5rem" color="#1E1D46"/>
+     </CloudTop>
             <DarkNavbar />
             <DarkBannerSection />
-            <DarkChartSection/>
+             <CloudIconBottomLeft>
+ <BsFillCloudFill size="5rem" color="#1E1D46"/>
+      </CloudIconBottomLeft>
             </DarkContainer>
     )
 }
@@ -23,6 +29,17 @@ border-bottom-right-radius:1.25rem;
 padding-top: 4.5rem;
 color:whitesmoke;
 height: auto;
+`
+
+const CloudTop = styled.div`
+margin-left:32rem;
+top:2.5rem;
+position: absolute;
+`
+const CloudIconBottomLeft = styled.div`
+right: 20rem;
+position:absolute;
+bottom:0rem;
 `
 
 export default DarkSection

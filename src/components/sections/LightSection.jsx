@@ -20,7 +20,7 @@ const LightSection = () => {
 
 const LightContainer = styled.div`
 background-color:#E3F6FE;
-width: 55%;
+/* width: 55%; */
 border:1px solid #E3F6FE;
 border-top-left-radius:1.25rem;
 border-bottom-left-radius:1.25rem;

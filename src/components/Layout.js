@@ -13,7 +13,8 @@ const Layout = () => {
 }
 
 const LayoutGrid = styled.div`
-display: flex;
+display: grid;
+grid-template-columns:65rem 40rem;
 margin:0;
 padding: 2rem 4rem;
 height:100%;

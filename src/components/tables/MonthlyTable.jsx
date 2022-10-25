@@ -1,51 +1,19 @@
 
 import React from 'react'
 import styled from 'styled-components'
-import { useTable } from 'react-table'
 import { BsDropletFill,BsSunFill } from "react-icons/bs"
+import { Table } from './Weeklytable'
 
 
 
 
-function Table({ columns, data }) {
-  // Use the state and functions returned from useTable to build your UI
-  const {
-    getTableProps,
-    getTableBodyProps,
-    rows,
-    prepareRow,
-  } = useTable({
-    columns,
-    data,
-  })
 
-  // Render the UI for your table
-  return (
-    <table {...getTableProps()}>
-      <tbody {...getTableBodyProps()}>
-        {rows.map((row, i) => {
-          prepareRow(row)
-          return (
-              <tr {...row.getRowProps()}>
-                  {row.cells.map(cell => {           
-                  return <td {...cell.getCellProps()}>
-                      {cell.render('Cell')}
-                  </td>
-              })}
-            </tr>
-          )
-        })}
-      </tbody>
-    </table>
-  )
-}
-
-const LightTable=()=>{
+const MonthlyTable= ()=>{
   const columns = React.useMemo(
     () => [
       {
         
-            accessor: 'day',
+            accessor: 'month',
           },   
       {
           accessor: 'humidity',
@@ -80,97 +48,65 @@ const LightTable=()=>{
      
     []
   )
-    
-    const weatherData = [
+
+  const monthlyData = [
         {
-            day: "Sunday",
+            month: "Jan",
             humidity: " 54%",
             icon: 'icon',
             temperature:'17C'
         },
         {
-            day: "Monday",
+            month: "Feb",
             humidity: "21%",
             icon: 'icon',
             temperature:'20C'
             
         },
         {
-            day: "Tuesday",
+             month: "March",
             humidity: "34%",
             icon: 'icon',
             temperature:'24C'
             
         },
         {
-            day: "Wednesday",
+           month: "April",
             humidity: "30%",
             icon: 'icon',
             temperature:'28C'
             
         },
         {
-            day: "Thursday",
+           month:"May",
             humidity: "44%",
             icon: 'icon',
             temperature:'27C'  
         },
           {
-            day: "Friday",
+            month: "June",
             humidity: "24%",
             icon: 'icon',
             temperature:'15C'  
         },
             {
-            day: "Saturday",
+           month:"July",
             humidity: "37%",
             icon: 'icon',
             temperature:'20C'  
         },
     ]
 
-
+  
+  
   return (
-    <Styles>
-      <Table columns={columns} data={weatherData} />
-    </Styles>
+     
+      <Table columns={columns} data={monthlyData} />
+    
   )
 }
 
-const Styles = styled.div`
-  table {
-    border-spacing: 0 1.1rem ;
-    width:96%;
-    color:#656F92;
-    font-weight:500;
-    font-size:1.1rem ;
-font-family: 'Montserrat', sans-serif;
- 
-    tr {
-      :last-child {
-        td {
-          border-bottom: 0;
-         
-        }
-      }
-    }
 
-    th,
-    td {
-      margin: 0;
-      padding: 0.5rem 1rem;
-      
-:first-child{ 
-}
-      :nth-child(2){
-      }
-      :nth-child(3){
-      }
-      :last-child {
-      }
-    }
-  }
-`
 const Humidity=styled.div`
     display:flex ;
     align-items:center ;
@@ -181,4 +117,4 @@ const Humidity=styled.div`
   
   `
 
-export default LightTable;
+export default MonthlyTable;

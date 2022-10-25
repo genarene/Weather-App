@@ -1,8 +1,10 @@
 import React from 'react'
 import styled from 'styled-components'
 import CountryCard from '../../components/cards/CountryCards'
-import VisualSection from '../VisualSection'
 import LightNavbar from '../NavbarSection/LightNavbar'
+import TabsSection from './TabsSection'
+
+
 const LightSection = () => {
     return (
          <LightContainer>
@@ -12,7 +14,7 @@ const LightSection = () => {
                     <ForecastSpan>Forecast</ForecastSpan>
         </BannerTitle>
             <CountryCard />
-            <VisualSection/>
+           <TabsSection/>
             </LightContainer>
        
     )

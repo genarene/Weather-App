@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import DarkSection from './sections/DarkSection'
 import LightSection from './sections/LightSection'
 
+
 const Layout = () => {
     return (
         <LayoutGrid>

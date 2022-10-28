@@ -1,28 +1,30 @@
 import React from 'react'
 import styled from 'styled-components'
 import CountryCard from '../../components/cards/CountryCards'
-import LightNavbar from '../NavbarSection/LightNavbar'
+import { CountryProvider } from '../contexts/countryContext'
+import Searchbar from '../NavbarSection/Searchbar'
 import TabsSection from './TabsSection'
 
 
 const LightSection = () => {
     return (
-         <LightContainer>
-        <LightNavbar />
- <BannerTitle>
-                    <WeatherSpan>Weather</WeatherSpan>
-                    <ForecastSpan>Forecast</ForecastSpan>
+        <CountryProvider>
+        <LightContainer>
+              
+                <Searchbar/>
+        <BannerTitle>
+             <WeatherSpan>Weather</WeatherSpan>
+             <ForecastSpan>Forecast</ForecastSpan>
         </BannerTitle>
-            <CountryCard />
-           <TabsSection/>
-            </LightContainer>
-       
+        <CountryCard />
+        <TabsSection/>
+        </LightContainer>
+        </CountryProvider>   
     )
 }
 
 const LightContainer = styled.div`
 background-color:#E3F6FE;
-/* width: 55%; */
 border:1px solid #E3F6FE;
 border-top-left-radius:1.25rem;
 border-bottom-left-radius:1.25rem;

@@ -1,12 +1,15 @@
 import React from 'react'
 import styled from 'styled-components'
-import {AiOutlinePlus} from 'react-icons/ai'
+import { AiOutlinePlus } from 'react-icons/ai'
 
-const CardOutline = () => {
+
+const CardOutline = ({ addCountry }) => {
+  
   return (
-      <Container>
+      <Container onClick={addCountry}>
           <AiOutlinePlus color='#110E3C' size="20px" />
-           <AddTitle>Add City</AddTitle>
+      <AddTitle >Add City</AddTitle>
+      
     </Container>
   )
 }

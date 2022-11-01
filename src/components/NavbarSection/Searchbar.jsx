@@ -2,6 +2,8 @@ import React, {useState} from 'react'
 import styled from 'styled-components'
 import { BiSearch } from 'react-icons/bi'
 import "../../index.css"
+import countryData from "../utilities/countryData.json"
+import { getAllCountries } from '../services/CountryServices'
 
 
 
@@ -11,36 +13,25 @@ const Searchbar =() => {
     const [searchInput, setSearchInput] = useState("");
     const [showSearch, setShowSearch] = useState(false)
 
-    const searchedData = [
-  { name: "Belgium", continent: "Europe" },
-  { name: "India", continent: "Asia" },
-  { name: "Bolivia", continent: "South America" },
-  { name: "Ghana", continent: "Africa" },
-  { name: "Japan", continent: "Asia" },
-  { name: "Canada", continent: "North America" },
-  { name: "New Zealand", continent: "Australasia" },
-  { name: "Italy", continent: "Europe" },
-  { name: "South Africa", continent: "Africa" },
-  { name: "China", continent: "Asia" },
-  { name: "Paraguay", continent: "South America" },
-  { name: "Usa", continent: "North America" },
-  { name: "Belgium", continent: "Europe" },
-  { name: "India", continent: "Asia" },
-  { name: "Bolivia", continent: "South America" },
-  { name: "Ghana", continent: "Africa" },
-  { name: "Japan", continent: "Asia" },
-  { name: "Canada", continent: "North America" },
-  { name: "New Zealand", continent: "Australasia" },
-    ]
+    const fetchAllCountries = () => {
+        getAllCountries()
+            .then((data) => {
+            console.log('the data',data)
+        })
+    }
 
-    const filteredData = searchedData.filter((data) => {
-        if (searchInput.length == '') {
+    fetchAllCountries();
+
+    const filteredData = countryData.filter((data) => {
+        if (searchInput.length === '') {
             return null;
         }
         else if (data.name.toLowerCase().match(searchInput))
         {
             return data;
         }
+
+        return data.name.match(searchInput);
 })
 
 
@@ -69,13 +60,14 @@ const Searchbar =() => {
            
             </InputContainer>
             {
-                !showSearch  ? null : <SearchResult>
+                showSearch && searchInput !== '' ? <SearchResult>
                 {filteredData.slice(0,10).map((item) => (
               
                     <Items key={item.name} onClick={()=>handleSearchValue(item.name)}>{item.name} {item.continent} </Items>   
             ))}
-          </SearchResult>
+          </SearchResult> : null
             }
+
             </Container>
     )
 }

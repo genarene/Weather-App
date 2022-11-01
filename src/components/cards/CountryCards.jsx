@@ -11,10 +11,10 @@ import { CountryContext } from '../contexts/countryContext'
 const CountryCards = () => {
 
   const countryData = [
-  { title: "Belgium,Europe", img: Berlin},
-  {  title: "India, Asia", img: Paris },
-  {  title: "Bolivia, South America", img: NewYork },
-  { title: "Ghana, Africa", img: Berlin },
+  { name: "Belgium,Europe", img: Berlin},
+  {  name: "India, Asia", img: Paris },
+  {  name: "Bolivia, South America", img: NewYork },
+  { name: "Ghana, Africa", img: Berlin },
   
   ]
   
@@ -27,13 +27,13 @@ const CountryCards = () => {
   
   return (
     <Container>
-       <Cards image={Berlin} title="Berlin, Germany"/>
-    <Cards image={Paris} title="Paris, France"/>
-      <Cards image={NewYork} title="NewYork, USA" />
+       <Cards image={Berlin} name="Berlin, Germany"/>
+    <Cards image={Paris} name="Paris, France"/>
+      <Cards image={NewYork} name="NewYork, USA" />
        {
         countries.map((country) => {
           console.log(country.name, country.continent)
-          return <Cards title={country.title} image={ country.img} />
+          return <Cards name={country.name} image={ country.img} />
         })
       }
        <CardOutline addCountry={() => handleCountries()} />

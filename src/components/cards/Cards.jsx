@@ -2,11 +2,11 @@ import React from 'react'
 import styled from 'styled-components'
 
 
-const Cards = ({image, title}) => {
+const Cards = ({image, name}) => {
   return (
     <Container>
       <StyledImage src={image} alt="Berlin, Germany" />
-      <StyledTitle>{title}</StyledTitle>
+      <StyledTitle>{name}</StyledTitle>
     </Container>
   )
 }

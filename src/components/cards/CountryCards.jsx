@@ -47,6 +47,23 @@ display:grid;
 grid-template-columns:repeat(4,15rem);
 grid-gap:20px 5px;
 flex-direction:row ;
+
+@media only screen and (max-width:1200px){
+display:grid;
+grid-template-columns:repeat(2,15rem);
+
+ }
+
+@media only screen and (max-width: 790px){
+display:grid;
+grid-template-columns:repeat(1fr);
+    }
+
+    @media only screen and (max-width: 490px){
+display:grid;
+grid-template-columns:repeat(1,15rem);
+}
+
 `
 
 export default CountryCards

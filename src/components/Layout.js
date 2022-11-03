@@ -20,6 +20,24 @@ margin:0;
 padding: 2rem 4rem;
 height:100%;
 font-family: 'Montserrat', sans-serif;
+
+/* medium screen */
+@media only screen and (max-width:1200px){
+   display: grid;
+grid-template-columns:38rem 25rem;
+}
+
+/* for small screen */
+@media only screen and (max-width:992px){
+   display: grid;
+grid-template-columns:30rem 22rem;
+}
+
+/* for extra small screens */
+@media only screen and (max-width: 790px){
+   display: flex;
+flex-direction: column-reverse;
+}
 `
 
 

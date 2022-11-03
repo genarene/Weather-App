@@ -6,7 +6,6 @@ const DarkNavbar = () => {
     return (
         <Container>
             <Notifications> Notifications <DynamicSpan>4</DynamicSpan></Notifications>
-            <PlacesSection>Places</PlacesSection> 
             <ProfileDiv>
                 <ProfileImg src={ProfilePic} alt="moon" /> <RedDot/>
         </ProfileDiv>
@@ -18,7 +17,8 @@ const DarkNavbar = () => {
 const Container = styled.div`
     display:flex;
    align-items:center;
-   padding:0 2rem ;
+   justify-content:space-between ;
+   padding:0 4rem ;
     
 `
 const DynamicSpan= styled.span`
@@ -27,20 +27,37 @@ const DynamicSpan= styled.span`
     border-radius:10px ;
     font-weight:bold;
     margin-left:0.6rem;
+
+    @media only screen and (max-width:1200px){
+margin-left:0.4rem;
+padding: 0.2rem 0.5rem;
+
+ }
+
+    @media only screen and (max-width: 790px){
+    padding: 0.2rem 0.5rem;
+ margin-left:0.2rem;
+    }
 `
 const Notifications =styled.div`
      margin-left:2rem;
   font-weight: 800;
  font-family:Arial, Helvetica, sans-serif;
  font-size: 18px;
+
+  @media only screen and (max-width:1200px){
+ font-weight:600;
+ font-size:15.5px ;
+ }
+
+  @media only screen and (max-width: 790px){
+    font-weight:600;
+    font-size:15px ;
+  }
 `
 
-const PlacesSection =styled.div`
-     margin-left: 2.9rem;
-   font-weight: 800;
- font-family:Arial, Helvetica, sans-serif;
- font-size: 18px;
-`
+
+
 const ProfileDiv = styled.div`
     position: relative;
     padding:1rem 0;
@@ -52,6 +69,17 @@ const ProfileImg =styled.img`
    height: 70px;
    border-radius: 10px;
   object-fit: cover;
+
+   @media only screen and (max-width:1200px){
+
+     margin-left: 3rem;
+
+   }
+
+  @media only screen and (max-width: 790px){
+     margin-left: 6rem;
+
+  }
 `
 const RedDot = styled.div`
    background-color:#EB5464;
@@ -61,5 +89,19 @@ const RedDot = styled.div`
    position: absolute;
    top:0.8rem;
    left:12.8rem ;
+
+@media only screen and (max-width:1200px){
+ top:0.5rem;
+   left:6.98rem ;
+ width:0.95rem;
+   height:0.95rem;
+   }
+
+   @media only screen and (max-width: 790px){
+     top:0.8rem;
+   left:10rem ;
+
+  }
+
 `
 export default DarkNavbar

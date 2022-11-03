@@ -82,12 +82,21 @@ color:#b1b0b8;
 font-size:16px;
 font-weight:bold;
 cursor: pointer;
+
+@media only screen and (max-width:1200px){
+padding:1rem 2rem;  
+width  :12rem ;
+}
+
+@media only screen and (max-width: 490px){
+padding:0.5rem 0.2rem;    
+
+}
 `
 const Container = styled.div`
 display:flex;
 flex-direction:column ;
 width: 38.5%;
-
 `
 const InputContainer = styled.div`
 position: relative; 
@@ -100,7 +109,18 @@ const SearchIcon =styled.div`
   top:1.19rem;
   right:3rem;
   cursor: pointer;
+
+  @media only screen and (max-width:1200px){
+    top:1.05rem;
+  right:0;
+}
+
+@media only screen and (max-width: 490px){
+ top:0.45rem;
+  left:10rem;
+}
 `
+
 
 
 const Items=styled.div`

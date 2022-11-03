@@ -42,6 +42,16 @@ justify-content:center ;
 align-items: center;
 margin-top:5rem;
 position: relative;
+
+@media only screen and (max-width:1200px){
+margin-top:0.5rem;
+
+}
+
+@media only screen and (max-width: 790px){
+margin-top:0.8rem;
+
+}
 `
 const DateSection = styled.div`
  display: flex;
@@ -49,34 +59,85 @@ const DateSection = styled.div`
  margin-right: 1rem;
 `
 const TimeTitle = styled.p`
-     font-weight: 600;
+font-weight: 600;
 font-family:monospace;
- font-size: 3rem;
- margin-left: 25px;
+font-size: 3.5rem;
+margin-left: 25px;
+
+@media only screen and (max-width:1200px){
+  font-weight:500;
+  font-size:2.5rem ;
+}
+
+@media only screen and (max-width: 790px){
+font-weight:400;
+font-size:1.5rem;
+}
+
 `
 const DateSpan= styled.span`
     font-weight: 200;
   font-size: 2rem;
+
+@media only screen and (max-width:1200px){
+  font-weight:500;
+  font-size:1.5rem ;
+}
+
+@media only screen and (max-width: 790px){
+font-weight:200;
+font-size:1rem;
+}
 `
 const DegreeNumber = styled.p`
 position:relative ;
-     font-weight: 300;
+  font-weight: 300;
   font-size: 8rem;
   margin:0 ;
   padding:0 ;
   font-family:Verdana, Geneva, Tahoma, sans-serif;
   margin-top: 2rem;
+
+@media only screen and (max-width:1200px){
+  font-weight:300;
+  font-size:5rem;
+  margin-top:1rem;
+
+}
+
+  @media only screen and (max-width: 790px){
+font-weight:300;
+font-size:1.6rem;
+ margin-top:1.3rem;
+}
  
 `
 const DegreeSymbol= styled.div`
-     font-size: 1.6rem;
-  margin-left: 0px;
+font-size: 1.6rem;
+margin-left: 0px;
  position: absolute;
  top: 1.5rem;
  right: 0;
  left:10rem ;
  color:white;
- font-weight:400 ;
+ font-weight:400;
+
+
+ @media only screen and (max-width:1200px){
+  font-weight:400;
+  font-size:1.2rem;
+ left:5.9rem ;
+ top:0
+
+}
+
+  @media only screen and (max-width: 790px){
+font-weight:400;
+font-size:1rem;
+ margin-top:0;
+ left:2rem ;
+ top:0
+}
 `
 const CountrySection = styled.p`
  font-family: 'Montserrat', sans-serif;
@@ -86,6 +147,9 @@ const CountrySection = styled.p`
 color: whitesmoke;
 margin-top:2rem;
  
+ @media only screen and (max-width: 790px){
+  margin-top:1.4rem;
+ }
 `
 const Dot = styled.div`
 display: inline-block;
@@ -101,12 +165,28 @@ const CloudIconRight = styled.div`
 margin-right: 25rem;
 position:absolute;
 bottom:10rem;
+
+@media only screen and (max-width:1200px){
+display:none ;
+ }
+
+
+@media only screen and (max-width: 790px){
+display:none ;
+}
 `
 const CloudIconLeft = styled.div`
   margin-left: 30rem;
 position:absolute;
 top:0;
-/* margin-bottom:27rem; */
+
+@media only screen and (max-width:1200px){
+display:none ;
+ }
+
+@media only screen and (max-width: 790px){
+display:none ;
+}
 `
 
 
